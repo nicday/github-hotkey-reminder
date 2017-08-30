@@ -1,0 +1,27 @@
+{
+  "name": "GitHub Hotkey Reminder",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Reminds you of keyboard shortcuts when ever you use the mouse to complete an action with a shortcut",
+  "homepage_url": "https://github.com/nicday/github-shortcut-reminder",
+  "author": "Nic Day",
+  "permissions": [
+    "http://github.com/*",
+    "https://github.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://github.com/*",
+        "https://github.com/*"
+      ],
+      "js": [
+        "src/inject.js"
+      ],
+      "css": [
+        "src/inject.css"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
